@@ -1,11 +1,11 @@
 package com.rc.calc.domain
 
 enum class Operation(val symbol: Char) {
-    Addition('+'),
-    Subtraction('-'),
-    Multiplication('*'),
-    Division('/'),
-    Percentage('%')
+    ADD('+'),
+    SUBTRACT('-'),
+    MULTIPLY('*'),
+    DIVIDE('/'),
+    PERCENT('%')
 }
 
 val operationSymbols = Operation.values().map  { operation ->

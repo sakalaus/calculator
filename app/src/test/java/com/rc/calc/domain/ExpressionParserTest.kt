@@ -13,9 +13,9 @@ class ExpressionParserTest{
         val parts = parser.parse()
         val expected = listOf(
             ExpressionPart.Number(4.0),
-            ExpressionPart.Op(operation = Operation.Subtraction),
+            ExpressionPart.Op(operation = Operation.SUBTRACT),
             ExpressionPart.Number(3.0),
-            ExpressionPart.Op(operation = Operation.Multiplication),
+            ExpressionPart.Op(operation = Operation.MULTIPLY),
             ExpressionPart.Number(2.0)
         )
         assertEquals(expected, parts)
@@ -28,10 +28,10 @@ class ExpressionParserTest{
         val expected = listOf(
             ExpressionPart.Parentheses(ParenthesesType.Opening),
             ExpressionPart.Number(4.5),
-            ExpressionPart.Op(operation = Operation.Subtraction),
+            ExpressionPart.Op(operation = Operation.SUBTRACT),
             ExpressionPart.Number(3.0),
             ExpressionPart.Parentheses(ParenthesesType.Closing),
-            ExpressionPart.Op(operation = Operation.Multiplication),
+            ExpressionPart.Op(operation = Operation.MULTIPLY),
             ExpressionPart.Number(2.0)
         )
         assertEquals(expected, parts)
