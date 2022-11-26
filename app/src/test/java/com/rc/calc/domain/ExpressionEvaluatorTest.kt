@@ -38,7 +38,7 @@ class ExpressionEvaluatorTest{
             )
         )
         val actualValue = evaluator.evaluate()
-        val expectedValue = 3.5
+        val expectedValue = 3.6
 
         assertEquals(expectedValue, actualValue, 0.0)
     }
